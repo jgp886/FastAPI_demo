@@ -76,6 +76,6 @@ def add_trip(car_id: int, trip: TripInput) -> TripOutput:
     else:
         raise HTTPException(status_code=404, detail=f"No car with id={id}.")
 
-
+# the following allows for debug inside VS Code or PyCharm IDE
 if __name__ == "__main__":
     uvicorn.run("carsharing:app", reload=True)
